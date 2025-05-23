@@ -1,1 +1,1 @@
-POST LINK: https://www.mlwhiz.com/p/genai-series-building-rag-applications
+POST LINK: https://open.substack.com/pub/mlwhiz/p/genai-series-beyond-basic-rag-building
