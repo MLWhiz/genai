@@ -1,0 +1,1 @@
+POST LINK: https://www.mlwhiz.com/p/genai-series-building-rag-applications
