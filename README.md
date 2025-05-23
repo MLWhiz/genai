@@ -1,5 +1,3 @@
-# GenAI Repository
-
 <div align="center">
   <h3>🚀 Welcome to the GenAI Repository</h3>
   
