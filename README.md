@@ -14,6 +14,8 @@ This repository accompanies the following blog posts:
 
 4. [GenAI Series: Building RAG Applications](https://www.mlwhiz.com/p/genai-series-building-rag-applications) - Guide to building Retrieval-Augmented Generation applications.
 
+5. [Advanced RAG Techniques for ML Engineers: Beyond Vector Search](https://open.substack.com/pub/mlwhiz/p/genai-series-beyond-basic-rag-building) - Guide to building Advanced Retrieval-Augmented Generation applications with Agents.
+
 ## Repository Structure
 
 ```
