@@ -21,8 +21,9 @@ This repository accompanies the following blog posts:
 ```
 genai/
 ├── 1_GenAiArchitecturalJourney/
-│   └── README.md
-├── 2_PromptEngineering/
+│   ├── README.md
+│   └── [12 Research Papers] - Key papers in GenAI evolution
+├── 2_PromptEngieering/
 │   └── README.md
 ├── 3_VibeCoding/
 │   └── README.md
@@ -30,9 +31,29 @@ genai/
 │   ├── README.md
 │   └── RAG Code.ipynb
 ├── 5_Advanced_RAG/
-│   └── RAG_with_LLAMAIndex.ipynb
+│   ├── README.md
+│   ├── RAG_with_LLAMAIndex.ipynb
+│   └── movie_details_top10k.json
 └── README.md
 ```
+
+## Contents Overview
+
+### 1. GenAI Architectural Journey
+Contains a comprehensive collection of 12 foundational research papers that trace the evolution of generative AI:
+
+1. **Attention is All You Need** - The transformer architecture that started it all
+2. **Improving Language Understanding by Generative Pre-Training** - GPT-1 introduction
+3. **Pre-training of Deep Bidirectional Transformers for Language Understanding** - BERT paper
+4. **Language Models are Unsupervised Multitask Learners** - GPT-2 paper
+5. **Language Models are Few-Shot Learners** - GPT-3 paper
+6. **Training Compute-Optimal Large Language Models** - Chinchilla scaling laws
+7. **Scaling Laws for Neural Language Models** - Understanding model scaling
+8. **PaLM: Scaling Language Modeling with Pathways** - Google's approach to scaling
+9. **Training language models to follow instructions with human feedback** - InstructGPT
+10. **Constitutional AI: Harmlessness from AI Feedback** - Anthropic's safety approach
+11. **LLaMA: Open and Efficient Foundation Language Models** - Meta's open source models
+12. **GPT-4 Technical Report** - Latest developments in the GPT series
 
 ## Code Examples
 
@@ -62,6 +83,7 @@ This notebook showcases a production-ready RAG system using LlamaIndex with adva
    - MovieLens 25M dataset integration
    - TMDB API for rich movie metadata (cast, crew, reviews, keywords)
    - Sophisticated document chunking and node creation
+   - Includes `movie_details_top10k.json` with pre-processed movie data
 
 2. **Hybrid Retrieval System**:
    - **Vector Search** using BGE embeddings (`BAAI/bge-large-en-v1.5`)
@@ -80,10 +102,5 @@ This notebook showcases a production-ready RAG system using LlamaIndex with adva
    - **Mood-based Recommender** - Contextual recommendations
    - **ReAct Agent** for complex multi-step reasoning
 
-## Getting Started
-
-To run the notebook examples:
-
-1. Clone this repository
-2. Set up appropriate API keys for the LLM services used in the examples
-3. Run the Jupyter notebooks
+## License
+This project is open source and available under the [MIT License](LICENSE).
