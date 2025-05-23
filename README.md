@@ -3,18 +3,13 @@
 This repository contains code examples and resources related to a series of blog posts about Generative AI (GenAI) published on [MLWhiz](https://www.mlwhiz.com/). The content focuses on various aspects of GenAI, from architectural concepts to practical implementations.
 
 ## Blog Posts in the Series
-
-This repository accompanies the following blog posts:
-
-1. [GenAI Series: A Review of the Architectural Journey](https://www.mlwhiz.com/p/genai-series-a-review-of-the-architectural) - An overview of the evolution and architecture of generative AI systems.
-
-2. [GenAI Series: The Art and Science of Prompt Engineering](https://www.mlwhiz.com/p/genai-series-the-art-and-science) - Techniques and strategies for effective prompt engineering.
-
-3. [GenAI Series: My Tryst with AI-Assisted Development](https://www.mlwhiz.com/p/genai-series-my-tryst-with-ai-assisted) - Experiences and insights on using AI for code development.
-
-4. [GenAI Series: Building RAG Applications](https://www.mlwhiz.com/p/genai-series-building-rag-applications) - Guide to building Retrieval-Augmented Generation applications.
-
-5. [Advanced RAG Techniques for ML Engineers: Beyond Vector Search](https://open.substack.com/pub/mlwhiz/p/genai-series-beyond-basic-rag-building) - Guide to building Advanced Retrieval-Augmented Generation applications with Agents.
+| # | Title | Description |
+|---|-------|-------------|
+| 1 | [GenAI Series: A Review of the Architectural Journey](https://www.mlwhiz.com/p/genai-series-a-review-of-the-architectural) | An overview of the evolution and architecture of generative AI systems |
+| 2 | [GenAI Series: The Art and Science of Prompt Engineering](https://www.mlwhiz.com/p/genai-series-the-art-and-science) | Techniques and strategies for effective prompt engineering |
+| 3 | [GenAI Series: My Tryst with AI-Assisted Development](https://www.mlwhiz.com/p/genai-series-my-tryst-with-ai-assisted) | Experiences and insights on using AI for code development |
+| 4 | [GenAI Series: Building RAG Applications](https://www.mlwhiz.com/p/genai-series-building-rag-applications) | Guide to building Retrieval-Augmented Generation applications |
+| 5 | [Advanced RAG Techniques for ML Engineers: Beyond Vector Search](https://open.substack.com/pub/mlwhiz/p/genai-series-beyond-basic-rag-building) | Guide to building Advanced Retrieval-Augmented Generation applications with Agents |
 
 ## Repository Structure
 
