@@ -74,10 +74,10 @@ This notebook showcases a production-ready RAG system using LlamaIndex with adva
    - **Metadata Filtering** by year, director, genre, etc.
 
 4. **Multi-Agent Architecture**:
-   - **Similarity Search Tool** - Netflix-style "more like this" recommendations
-   - **Advanced Filter Tool** - Amazon Prime-style filtering by multiple criteria
-   - **Review Analysis Tool** - Rotten Tomatoes-style critical reception analysis
-   - **Mood-based Recommender** - Spotify-style contextual recommendations
+   - **Similarity Search Tool** - "more like this" recommendations
+   - **Advanced Filter Tool** - Filtering by multiple criteria
+   - **Review Analysis Tool** - Critical reception analysis
+   - **Mood-based Recommender** - Contextual recommendations
    - **ReAct Agent** for complex multi-step reasoning
 
 ## Getting Started
