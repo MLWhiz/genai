@@ -27,33 +27,61 @@ genai/
 ├── 4_RAG/
 │   ├── README.md
 │   └── RAG Code.ipynb
+├── 5_Advanced_RAG/
+│   └── RAG_with_LLAMAIndex.ipynb
 └── README.md
 ```
 
 ## Code Examples
 
-### RAG Implementation (4_RAG/RAG Code.ipynb)
+### Basic RAG Implementation (4_RAG/RAG Code.ipynb)
 
 This Jupyter notebook demonstrates how to build a movie recommendation system using Retrieval-Augmented Generation (RAG). The notebook covers:
 
-1. **Data Loading and Preprocessing** - Working with TMDB movie metadata
-2. **Embedding Creation** - Using sentence transformers to create vector embeddings
-3. **Vector Database Setup** - Implementation with ChromaDB
-4. **Retrieval Methods**:
-   - Basic retrieval with query expansion
-   - HyDE (Hypothetical Document Embedding) for improved retrieval
-   - Query decomposition for complex queries
+1. **Data Loading and Preprocessing** - Working with TMDB movie metadata from Kaggle
+2. **Embedding Creation** - Using SentenceTransformers (`all-mpnet-base-v2`) to create vector embeddings
+3. **Vector Database Setup** - Implementation with ChromaDB for efficient similarity search
+4. **Advanced Retrieval Methods**:
+   - **Basic Retrieval** with query expansion for improved recall
+   - **HyDE (Hypothetical Document Embedding)** - Generates hypothetical documents that match the query for better retrieval
+   - **Query Decomposition** - Breaks complex queries into simpler sub-queries for comprehensive results
+5. **Response Generation** - Uses Google's Gemini model with structured output (Pydantic models)
 
-The example uses Google's Gemini model for generating responses based on retrieved context.
+**Key Features:**
+- Movie recommendation based on themes, genres, and plot elements
+- Multiple retrieval strategies for different query types
+- Structured JSON responses for easy integration
+
+### Advanced RAG Implementation (5_Advanced_RAG/RAG_with_LLAMAIndex.ipynb)
+
+This notebook showcases a production-ready RAG system using LlamaIndex with advanced features:
+
+1. **Enhanced Data Pipeline**:
+   - MovieLens 25M dataset integration
+   - TMDB API for rich movie metadata (cast, crew, reviews, keywords)
+   - Sophisticated document chunking and node creation
+
+2. **Hybrid Retrieval System**:
+   - **Vector Search** using BGE embeddings (`BAAI/bge-large-en-v1.5`)
+   - **BM25 Keyword Search** for exact term matching
+   - **Query Fusion** with reciprocal reranking for optimal results
+
+3. **Advanced Query Processing**:
+   - **HyDE Query Transformation** for semantic similarity
+   - **Cross-encoder Re-ranking** (`BAAI/bge-reranker-v2-m3`)
+   - **Metadata Filtering** by year, director, genre, etc.
+
+4. **Multi-Agent Architecture**:
+   - **Similarity Search Tool** - Netflix-style "more like this" recommendations
+   - **Advanced Filter Tool** - Amazon Prime-style filtering by multiple criteria
+   - **Review Analysis Tool** - Rotten Tomatoes-style critical reception analysis
+   - **Mood-based Recommender** - Spotify-style contextual recommendations
+   - **ReAct Agent** for complex multi-step reasoning
 
 ## Getting Started
 
 To run the notebook examples:
 
 1. Clone this repository
-2. Install the required dependencies:
-   ```
-   pip install sentence_transformers chromadb google-genai pandas numpy pydantic
-   ```
-3. Set up appropriate API keys for the LLM services used in the examples
-4. Run the Jupyter notebooks
+2. Set up appropriate API keys for the LLM services used in the examples
+3. Run the Jupyter notebooks
