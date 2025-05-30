@@ -33,7 +33,7 @@ genai/
 ├── 1_GenAiArchitecturalJourney/
 │   ├── README.md
 │   └── [12 Research Papers] - Key papers in GenAI evolution
-├── 2_PromptEngieering/
+├── 2_PromptEngineering/
 │   └── README.md
 ├── 3_VibeCoding/
 │   └── README.md
@@ -43,7 +43,7 @@ genai/
 ├── 5_Advanced_RAG/
 │   ├── README.md
 │   ├── RAG_with_LLAMAIndex.ipynb
-│   └── movie_details_top10k.json
+│   └── processed_books.pkl
 └── README.md
 ```
 
@@ -90,10 +90,9 @@ This Jupyter notebook demonstrates how to build a movie recommendation system us
 This notebook showcases a production-ready RAG system using LlamaIndex with advanced features:
 
 1. **Enhanced Data Pipeline**:
-   - MovieLens 25M dataset integration
-   - TMDB API for rich movie metadata (cast, crew, reviews, keywords)
+   - Amazon Books dataset integration
    - Sophisticated document chunking and node creation
-   - Includes `movie_details_top10k.json` with pre-processed movie data
+   - Includes `processed_books.pkl` with pre-processed data
 
 2. **Hybrid Retrieval System**:
    - **Vector Search** using BGE embeddings (`BAAI/bge-large-en-v1.5`)
@@ -103,12 +102,11 @@ This notebook showcases a production-ready RAG system using LlamaIndex with adva
 3. **Advanced Query Processing**:
    - **HyDE Query Transformation** for semantic similarity
    - **Cross-encoder Re-ranking** (`BAAI/bge-reranker-v2-m3`)
-   - **Metadata Filtering** by year, director, genre, etc.
+   - **Metadata Filtering** by author, rating, etc.
 
 4. **Multi-Agent Architecture**:
    - **Similarity Search Tool** - "more like this" recommendations
    - **Advanced Filter Tool** - Filtering by multiple criteria
-   - **Review Analysis Tool** - Critical reception analysis
    - **Mood-based Recommender** - Contextual recommendations
    - **ReAct Agent** for complex multi-step reasoning
 
