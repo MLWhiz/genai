@@ -16,6 +16,7 @@ This content spans the full spectrum of GenAI development:
 - 💡 Best practices and optimization techniques
 - 🔬 Advanced RAG implementations
 - 🤖 AI-assisted development workflows
+- 🎯 Advanced PEFT techniques for model fine-tuning
 
 ## Blog Posts in the Series
 | # | Title | Description |
@@ -25,6 +26,7 @@ This content spans the full spectrum of GenAI development:
 | 3 | [GenAI Series: My Tryst with AI-Assisted Development](https://www.mlwhiz.com/p/genai-series-my-tryst-with-ai-assisted) | Experiences and insights on using AI for code development |
 | 4 | [GenAI Series: Building RAG Applications](https://www.mlwhiz.com/p/genai-series-building-rag-applications) | Guide to building Retrieval-Augmented Generation applications |
 | 5 | [Advanced RAG Techniques for ML Engineers: Beyond Vector Search](https://open.substack.com/pub/mlwhiz/p/genai-series-beyond-basic-rag-building) | Guide to building Advanced Retrieval-Augmented Generation applications with Agents |
+| 6 | Advanced PEFT Techniques for Model Fine-tuning | Comprehensive guide to Parameter-Efficient Fine-Tuning methods including LoRA, QLoRA, DoRA, AdaLoRA, and IA³ |
 
 ## Repository Structure
 
@@ -44,6 +46,10 @@ genai/
 │   ├── README.md
 │   ├── RAG_with_LLAMAIndex.ipynb
 │   └── processed_books.pkl
+├── 6_Advanced_PEFT/
+│   ├── README.md
+│   ├── Advanced PEFT Techniques.ipynb
+│   └── requirements.txt
 └── README.md
 ```
 
@@ -109,6 +115,49 @@ This notebook showcases a production-ready RAG system using LlamaIndex with adva
    - **Advanced Filter Tool** - Filtering by multiple criteria
    - **Mood-based Recommender** - Contextual recommendations
    - **ReAct Agent** for complex multi-step reasoning
+
+### Advanced PEFT Implementation (6_Advanced_PEFT/Advanced PEFT Techniques.ipynb)
+
+This comprehensive notebook demonstrates cutting-edge Parameter-Efficient Fine-Tuning (PEFT) techniques for optimizing large language models:
+
+1. **LoRA (Low-Rank Adaptation)**:
+   - Traditional LoRA implementation with rank decomposition
+   - Efficient fine-tuning with minimal parameter overhead (~0.09% trainable parameters)
+   - Model merging and deployment strategies
+
+2. **QLoRA (Quantized LoRA)**:
+   - 4-bit quantization with NF4 data type
+   - Combines quantization with LoRA for maximum efficiency
+   - Uses BitsAndBytesConfig for optimal memory usage
+
+3. **DoRA (Weight-Decomposed Low-Rank Adaptation)**:
+   - Advanced technique that separates directional and magnitude components
+   - Enhanced performance over traditional LoRA
+   - Can be combined with quantization for memory efficiency
+
+4. **AdaLoRA (Adaptive LoRA)**:
+   - Dynamic rank adaptation during training
+   - Automatically adjusts importance of different modules
+   - Orthogonal regularization for better parameter efficiency
+
+5. **IA³ (Infused Adapter by Inhibiting and Amplifying Inner Activations)**:
+   - Ultra-efficient method with only 0.0072% trainable parameters
+   - Scales key/value projections and feed-forward networks
+   - Minimal computational overhead
+
+**Key Features:**
+- Complete training pipelines for each PEFT method
+- Performance comparisons and parameter efficiency analysis
+- Production-ready implementations with proper evaluation
+- Memory optimization strategies and best practices
+- Model saving, loading, and deployment configurations
+
+**Technical Highlights:**
+- Uses Mistral-7B as the base model for demonstrations
+- Stanford Alpaca dataset for instruction fine-tuning
+- Comprehensive evaluation with perplexity metrics
+- Support for both FP16 and quantized training
+- Gradient checkpointing and memory optimization
 
 ## License
 This project is open source and available under the [MIT License](LICENSE).
