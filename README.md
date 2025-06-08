@@ -26,7 +26,7 @@ This content spans the full spectrum of GenAI development:
 | 3 | [GenAI Series: My Tryst with AI-Assisted Development](https://www.mlwhiz.com/p/genai-series-my-tryst-with-ai-assisted) | Experiences and insights on using AI for code development |
 | 4 | [GenAI Series: Building RAG Applications](https://www.mlwhiz.com/p/genai-series-building-rag-applications) | Guide to building Retrieval-Augmented Generation applications |
 | 5 | [Advanced RAG Techniques for ML Engineers: Beyond Vector Search](https://open.substack.com/pub/mlwhiz/p/genai-series-beyond-basic-rag-building) | Guide to building Advanced Retrieval-Augmented Generation applications with Agents |
-| 6 | Advanced PEFT Techniques for Model Fine-tuning | Comprehensive guide to Parameter-Efficient Fine-Tuning methods including LoRA, QLoRA, DoRA, AdaLoRA, and IA³ |
+| 6 | [Advanced PEFT Techniques for Model Fine-tuning](https://open.substack.com/pub/mlwhiz/p/fine-tuning-llms-your-guide-to-peft?r=9kivc&utm_campaign=post&utm_medium=web&showWelcomeOnShare=true) | Comprehensive guide to Parameter-Efficient Fine-Tuning methods including LoRA, QLoRA, DoRA, AdaLoRA, and IA³ |
 
 ## Repository Structure
 
