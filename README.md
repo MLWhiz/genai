@@ -52,8 +52,7 @@ genai/
 │   ├── Advanced PEFT Techniques.ipynb
 │   └── requirements.txt
 ├── 7_GraphRAG/
-│   ├── README.md
-│   └── POst content
+│   └── README.md
 └── README.md
 ```
 
