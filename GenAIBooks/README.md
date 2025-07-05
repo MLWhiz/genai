@@ -10,6 +10,9 @@ This folder contains a curated collection of Generative AI books and resources f
 | **LangChain** | Generative AI with LangChain | Ben Auffarth (2024) | PDF |
 | **Business Perspective** | Harvard Business Review Generative AI | Harvard Business Review | PDF |
 | **General GenAI** | Generative AI | Martin Musiol | PDF |
+| **Practical Applications** | 100 Uses of ChatGPT | Various | PDF |
+| **Beginner's Guide** | GenAI For Dummies | For Dummies Series | PDF |
+| **Business Applications** | Generative AI in Practice: 100 Amazing Ways Generative AI is Changing Business | Various | PDF |
 
 ## Google GenAI Course Materials
 
