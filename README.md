@@ -27,6 +27,7 @@ This content spans the full spectrum of GenAI development:
 | 4 | [GenAI Series: Building RAG Applications](https://www.mlwhiz.com/p/genai-series-building-rag-applications) | Guide to building Retrieval-Augmented Generation applications |
 | 5 | [Advanced RAG Techniques for ML Engineers: Beyond Vector Search](https://open.substack.com/pub/mlwhiz/p/genai-series-beyond-basic-rag-building) | Guide to building Advanced Retrieval-Augmented Generation applications with Agents |
 | 6 | [Advanced PEFT Techniques for Model Fine-tuning](https://open.substack.com/pub/mlwhiz/p/fine-tuning-llms-your-guide-to-peft?r=9kivc&utm_campaign=post&utm_medium=web&showWelcomeOnShare=true) | Comprehensive guide to Parameter-Efficient Fine-Tuning methods including LoRA, QLoRA, DoRA, AdaLoRA, and IA³ |
+| 7 | [Traditional RAG is Dead, Long Live GraphRAG](https://www.mlwhiz.com/p/traditional-rag-is-dead-long-live) | Evolution beyond traditional RAG systems using knowledge graphs and interconnected intelligence |
 
 ## Repository Structure
 
@@ -50,6 +51,9 @@ genai/
 │   ├── README.md
 │   ├── Advanced PEFT Techniques.ipynb
 │   └── requirements.txt
+├── 7_GraphRAG/
+│   ├── README.md
+│   └── POst content
 └── README.md
 ```
 
@@ -70,6 +74,50 @@ Contains a comprehensive collection of 12 foundational research papers that trac
 10. **Constitutional AI: Harmlessness from AI Feedback** - Anthropic's safety approach
 11. **LLaMA: Open and Efficient Foundation Language Models** - Meta's open source models
 12. **GPT-4 Technical Report** - Latest developments in the GPT series
+
+### 2. Prompt Engineering
+Delve into the art and science of crafting effective prompts for generative models. This section provides insights and techniques to optimize prompt design, ensuring high-quality and relevant outputs from AI models.
+
+### 3. Vibe Coding
+Explore the innovative realm of Vibe Coding, where coding meets creativity. This section showcases projects and ideas that blend artistic expression with programming, pushing the boundaries of traditional software development.
+
+### 4. RAG (Retrieval-Augmented Generation)
+Learn the fundamentals of Retrieval-Augmented Generation, a technique that enhances generative models with retrieval mechanisms. This section covers the basics and provides a hands-on implementation guide.
+
+### 5. Advanced RAG Techniques
+Dive deeper into advanced RAG methodologies, exploring sophisticated techniques and their practical applications. This section is tailored for ML engineers seeking to enhance their skills and knowledge in RAG.
+
+### 6. Advanced PEFT (Parameter-Efficient Fine-Tuning)
+Understand the cutting-edge PEFT methods that enable efficient fine-tuning of large language models. This section offers a comprehensive guide to various PEFT techniques, their implementations, and best practices.
+
+### 7. GraphRAG Implementation (7_GraphRAG/)
+This section explores the evolution beyond traditional RAG systems using knowledge graphs and interconnected intelligence:
+
+**Key Concepts:**
+- **Knowledge Graph Construction**: Transform documents into interconnected entities and relationships
+- **Community Detection**: Use algorithms like Leiden to identify knowledge clusters
+- **Multi-hop Reasoning**: Traverse relationships to discover hidden connections
+- **Local vs Global Querying**: Intelligent strategies for different query types
+
+**The GraphRAG Advantage:**
+- Moves beyond treating documents as isolated fragments
+- Builds explicit knowledge graphs where nodes represent entities and edges capture relationships
+- Enables complex, multi-faceted queries that require understanding of interconnected concepts
+- Particularly powerful for domains with rich entity relationships
+
+**When to Use GraphRAG:**
+- Complex multi-hop reasoning required
+- Rich entity relationships in your domain
+- Users ask nuanced, interconnected questions
+- Discovering hidden connections is crucial
+
+**Current Tooling:**
+- **Microsoft GraphRAG**: Most comprehensive open-source implementation
+- **LlamaIndex**: Practical implementations with flexibility
+- **AWS Bedrock Knowledge Bases**: First fully-managed GraphRAG service
+- **Neo4j/NebulaGraph**: Robust graph database foundations
+
+**Blog Post:** [Traditional RAG is Dead, Long Live GraphRAG](https://www.mlwhiz.com/p/traditional-rag-is-dead-long-live)
 
 ## Code Examples
 
