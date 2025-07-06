@@ -3,7 +3,7 @@
   
   <p>
     <img src="https://img.shields.io/badge/GenAI-Research-blue" alt="GenAI Research"/>
-    <img src="https://img.shields.io/badge/ML-Whiz-orange" alt="ML Whiz"/>
+    <img src="https://img.shields.io/badge/Papers-36-orange" alt="36 Papers"/>
     <img src="https://img.shields.io/badge/Open-Source-green" alt="Open Source"/>
   </p>
 </div>
@@ -11,12 +11,14 @@
 This repository serves as a comprehensive collection of code examples, research papers, and practical resources from my Generative AI (GenAI) series published on [MLWhiz](https://www.mlwhiz.com/). 
 
 This content spans the full spectrum of GenAI development:
-- 📚 Architectural foundations and research papers
-- 🛠️ Practical implementation guides
+- 📚 Architectural foundations and research papers (48 total papers)
+- 🛠️ Practical implementation guides and code examples
 - 💡 Best practices and optimization techniques
-- 🔬 Advanced RAG implementations
+- 🔬 Advanced RAG implementations with agents
 - 🤖 AI-assisted development workflows
 - 🎯 Advanced PEFT techniques for model fine-tuning
+- 📖 Curated collection of essential GenAI books and resources
+- 🔍 Most influential research papers with detailed analysis
 
 ## Blog Posts in the Series
 | # | Title | Description |
@@ -53,6 +55,12 @@ genai/
 │   └── requirements.txt
 ├── 7_GraphRAG/
 │   └── README.md
+├── GenAIBooks/
+│   ├── README.md
+│   └── [Educational Books] - Comprehensive GenAI learning resources
+├── GenAIPapers/
+│   ├── README.md
+│   └── [36 Research Papers] - Most influential GenAI papers collection
 └── README.md
 ```
 
@@ -90,121 +98,48 @@ Dive deeper into advanced RAG methodologies, exploring sophisticated techniques 
 Understand the cutting-edge PEFT methods that enable efficient fine-tuning of large language models. This section offers a comprehensive guide to various PEFT techniques, their implementations, and best practices.
 
 ### 7. GraphRAG Implementation (7_GraphRAG/)
-This section explores the evolution beyond traditional RAG systems using knowledge graphs and interconnected intelligence:
+This section explores the evolution beyond traditional RAG systems using knowledge graphs and interconnected intelligence
 
-**Key Concepts:**
-- **Knowledge Graph Construction**: Transform documents into interconnected entities and relationships
-- **Community Detection**: Use algorithms like Leiden to identify knowledge clusters
-- **Multi-hop Reasoning**: Traverse relationships to discover hidden connections
-- **Local vs Global Querying**: Intelligent strategies for different query types
+### 8. GenAI Books Collection (GenAIBooks/)
+A curated collection of essential books and educational resources for mastering Generative AI:
+- **Foundational Texts**: Core books covering GenAI fundamentals
+- **Practical Guides**: Implementation-focused resources
+- **Industry Reports**: Latest insights from leading organizations
+- **Google GenAI Course**: Comprehensive materials from Google's AI training program
 
-**The GraphRAG Advantage:**
-- Moves beyond treating documents as isolated fragments
-- Builds explicit knowledge graphs where nodes represent entities and edges capture relationships
-- Enables complex, multi-faceted queries that require understanding of interconnected concepts
-- Particularly powerful for domains with rich entity relationships
+### 9. GenAI Papers Collection (GenAIPapers/)
+A comprehensive collection of 36 most influential research papers in Generative AI:
+- **8 Categories**: Architecture, Alignment, Fine-tuning, Code Generation, Reasoning, RAG, Multimodal AI, and Tool Use
+- **2019-2024 Coverage**: From foundational Transformers to latest breakthroughs
+- **Detailed Analysis**: Each paper includes key innovations and field impact
+- **Latest Research**: Includes 2024 papers like Phi-4, Gemini 1.5, and DeepSeek-R1
 
-**When to Use GraphRAG:**
-- Complex multi-hop reasoning required
-- Rich entity relationships in your domain
-- Users ask nuanced, interconnected questions
-- Discovering hidden connections is crucial
+**Key Paper Categories:**
+- 🏗️ **Architecture & Foundation Models** (8 papers): Mamba, Mixtral, LLaMA 2, Phi-4
+- 🧠 **Reasoning & Planning** (8 papers): Chain-of-Thought, Tree of Thoughts, DeepSeek-R1
+- 🔧 **Fine-tuning & Efficiency** (5 papers): LoRA, QLoRA, DoRA
+- 🌟 **Multimodal AI** (5 papers): CLIP, Gemini 1.5, GPT-4V
+- 🎯 **Alignment & Safety** (3 papers): RLHF, DPO, alignment studies
+- 🤖 **Code Generation** (3 papers): Codex, AlphaCode, Code Llama
+- 🔍 **RAG** (2 papers): Foundational and advanced RAG techniques
+- 🛠️ **Tool Use & Agents** (2 papers): Toolformer, ReWOO
 
-**Current Tooling:**
-- **Microsoft GraphRAG**: Most comprehensive open-source implementation
-- **LlamaIndex**: Practical implementations with flexibility
-- **AWS Bedrock Knowledge Bases**: First fully-managed GraphRAG service
-- **Neo4j/NebulaGraph**: Robust graph database foundations
+## 🌟 Repository Highlights
 
-**Blog Post:** [Traditional RAG is Dead, Long Live GraphRAG](https://www.mlwhiz.com/p/traditional-rag-is-dead-long-live)
+### 📊 **Collection Overview**
+- **Total Research Papers**: 48 (12 in Architectural Journey + 36 in GenAIPapers)
+- **Educational Books**: Comprehensive GenAI learning resources
+- **Practical Notebooks**: 4 hands-on implementation guides
+- **Blog Posts**: 7 comprehensive articles on MLWhiz
+- **Categories Covered**: Architecture, Alignment, Fine-tuning, RAG, Multimodal AI, and more
 
-## Code Examples
+### 🎯 **Key Resources**
+- **Foundational Papers**: Transformers, BERT, GPT series evolution
+- **Practical Implementations**: RAG systems, PEFT techniques, GraphRAG
+- **Advanced Topics**: Constitutional AI, mixture of experts, multimodal models
+- **Industry Applications**: Code generation, tool use, AI agents
 
-### Basic RAG Implementation (4_RAG/RAG Code.ipynb)
-
-This Jupyter notebook demonstrates how to build a movie recommendation system using Retrieval-Augmented Generation (RAG). The notebook covers:
-
-1. **Data Loading and Preprocessing** - Working with TMDB movie metadata from Kaggle
-2. **Embedding Creation** - Using SentenceTransformers (`all-mpnet-base-v2`) to create vector embeddings
-3. **Vector Database Setup** - Implementation with ChromaDB for efficient similarity search
-4. **Advanced Retrieval Methods**:
-   - **Basic Retrieval** with query expansion for improved recall
-   - **HyDE (Hypothetical Document Embedding)** - Generates hypothetical documents that match the query for better retrieval
-   - **Query Decomposition** - Breaks complex queries into simpler sub-queries for comprehensive results
-5. **Response Generation** - Uses Google's Gemini model with structured output (Pydantic models)
-
-**Key Features:**
-- Movie recommendation based on themes, genres, and plot elements
-- Multiple retrieval strategies for different query types
-- Structured JSON responses for easy integration
-
-### Advanced RAG Implementation (5_Advanced_RAG/RAG_with_LLAMAIndex.ipynb)
-
-This notebook showcases a production-ready RAG system using LlamaIndex with advanced features:
-
-1. **Enhanced Data Pipeline**:
-   - Amazon Books dataset integration
-   - Sophisticated document chunking and node creation
-   - Includes `processed_books.pkl` with pre-processed data
-
-2. **Hybrid Retrieval System**:
-   - **Vector Search** using BGE embeddings (`BAAI/bge-large-en-v1.5`)
-   - **BM25 Keyword Search** for exact term matching
-   - **Query Fusion** with reciprocal reranking for optimal results
-
-3. **Advanced Query Processing**:
-   - **HyDE Query Transformation** for semantic similarity
-   - **Cross-encoder Re-ranking** (`BAAI/bge-reranker-v2-m3`)
-   - **Metadata Filtering** by author, rating, etc.
-
-4. **Multi-Agent Architecture**:
-   - **Similarity Search Tool** - "more like this" recommendations
-   - **Advanced Filter Tool** - Filtering by multiple criteria
-   - **Mood-based Recommender** - Contextual recommendations
-   - **ReAct Agent** for complex multi-step reasoning
-
-### Advanced PEFT Implementation (6_Advanced_PEFT/Advanced PEFT Techniques.ipynb)
-
-This comprehensive notebook demonstrates cutting-edge Parameter-Efficient Fine-Tuning (PEFT) techniques for optimizing large language models:
-
-1. **LoRA (Low-Rank Adaptation)**:
-   - Traditional LoRA implementation with rank decomposition
-   - Efficient fine-tuning with minimal parameter overhead (~0.09% trainable parameters)
-   - Model merging and deployment strategies
-
-2. **QLoRA (Quantized LoRA)**:
-   - 4-bit quantization with NF4 data type
-   - Combines quantization with LoRA for maximum efficiency
-   - Uses BitsAndBytesConfig for optimal memory usage
-
-3. **DoRA (Weight-Decomposed Low-Rank Adaptation)**:
-   - Advanced technique that separates directional and magnitude components
-   - Enhanced performance over traditional LoRA
-   - Can be combined with quantization for memory efficiency
-
-4. **AdaLoRA (Adaptive LoRA)**:
-   - Dynamic rank adaptation during training
-   - Automatically adjusts importance of different modules
-   - Orthogonal regularization for better parameter efficiency
-
-5. **IA³ (Infused Adapter by Inhibiting and Amplifying Inner Activations)**:
-   - Ultra-efficient method with only 0.0072% trainable parameters
-   - Scales key/value projections and feed-forward networks
-   - Minimal computational overhead
-
-**Key Features:**
-- Complete training pipelines for each PEFT method
-- Performance comparisons and parameter efficiency analysis
-- Production-ready implementations with proper evaluation
-- Memory optimization strategies and best practices
-- Model saving, loading, and deployment configurations
-
-**Technical Highlights:**
-- Uses Mistral-7B as the base model for demonstrations
-- Stanford Alpaca dataset for instruction fine-tuning
-- Comprehensive evaluation with perplexity metrics
-- Support for both FP16 and quantized training
-- Gradient checkpointing and memory optimization
+---
 
 ## License
 This project is open source and available under the [MIT License](LICENSE).
