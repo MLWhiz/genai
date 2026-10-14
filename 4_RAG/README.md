@@ -263,3 +263,19 @@ pip install chromadb sentence-transformers google-generativeai pandas datasets
     🚀 <strong>Part of the <a href="https://www.mlwhiz.com/">MLWhiz</a> GenAI Series</strong> 🚀
   </p>
 </div>
+
+## Post summary
+
+The post builds a working RAG system from scratch, using a movie recommendation engine on the TMDB 5000 Movies dataset. It starts with why RAG matters: LLMs have knowledge cutoffs, can't see your private data, hallucinate, and don't cite sources. Custom RAG still beats a general LLM with web search when you need private data, control over retrieval, niche domains, cost control or offline use.
+
+A RAG system has three parts: a document pipeline, a retrieval system and a generation component. The build goes in four steps. Movies become text documents (4,803 of them), get embedded with the all-mpnet-base-v2 SentenceTransformer, and are stored in ChromaDB. Queries are expanded with simple rule-based templates and matched by similarity. Gemini (gemini-2.0-flash) generates structured JSON answers using Pydantic schemas. The system is then tested on queries such as "sci-fi movies like Inception".
+
+The post then adds four advanced techniques: HyDE (embed a generated hypothetical document instead of the query), re-ranking with a cross-encoder, query decomposition for complex queries, and recursive or parent-document retrieval. It closes with practical challenges (chunking, context limits, evaluation with hit rate, MRR, nDCG, RAGAS and LLM-as-a-judge, keeping the index fresh, retrieval quantity versus quality, and cost), a note on LangChain and LlamaIndex, and next steps such as agentic RAG, GraphRAG, hybrid search and fine-tuning. The code lives in [RAG Code.ipynb](RAG%20Code.ipynb).
+
+### Key takeaways
+
+- RAG gives an LLM your own up-to-date data without fine-tuning.
+- The pipeline is ingest and chunk, embed and retrieve, then generate.
+- Query expansion, HyDE, re-ranking and decomposition each improve retrieval in specific ways.
+- Chunking strategy and evaluation matter as much as the model choice.
+- Evaluate retrieval and generation separately.

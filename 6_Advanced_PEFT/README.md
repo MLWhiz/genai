@@ -125,3 +125,26 @@ This project is open source and available under the MIT License.
     🚀 <strong>Part of the <a href="https://www.mlwhiz.com/">MLWhiz</a> GenAI Series</strong> 🚀
   </p>
 </div> 
+
+## Post summary
+
+The post ("Fine-Tuning LLMs: Your Guide to PEFT, QDoRA, and Other Nifty Tricks") argues that full fine-tuning is overkill for most cases. PEFT can reach about 95% of full fine-tune performance while training under 1% of the parameters.
+
+It walks through the full LoRA workflow on Mistral-7B-v0.1 with the first 500 rows of the Alpaca dataset. Data should be in instruction, input, response format, and the author says 100-500 high-quality examples often beat thousands of noisy ones. LoRA replaces a full weight update with two small matrices, so W_new = W + (B @ A) * alpha. The post suggests starting with rank 8 or 16, alpha at twice the rank, and q_proj and v_proj as the default targets. In the post's run, perplexity on the eval set dropped from 6.36 to 3.11 after one epoch. The adapter is then merged with merge_and_unload() for no added inference latency.
+
+Four further methods follow:
+
+- QLoRA: 4-bit NormalFloat, double quantization and paged optimizers, so large models fit on one GPU.
+- DoRA: splits updates into magnitude and direction, with slightly more parameters than LoRA.
+- AdaLoRA: reallocates rank across layers by importance using an SVD form and a pruning schedule.
+- IA3: learns three small scaling vectors on keys, values and feed-forward activations, and is described as about 100x more parameter-efficient than LoRA.
+
+The post ends with a decision framework and a TL;DR: use QDoRA for most production use cases. Code is in [Advanced PEFT Techniques.ipynb](Advanced%20PEFT%20Techniques.ipynb).
+
+### Key takeaways
+
+- Data quality matters more than volume for fine-tuning.
+- LoRA's rank, alpha and target modules are the main settings to tune first.
+- QLoRA cuts memory by quantizing the frozen base model to 4 bits.
+- DoRA and AdaLoRA add magnitude learning and adaptive rank on top of LoRA.
+- Merge adapters before serving to avoid extra latency.

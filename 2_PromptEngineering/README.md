@@ -229,3 +229,21 @@ Include comments and error handling.
     🚀 <strong>Part of the <a href="https://www.mlwhiz.com/">MLWhiz</a> GenAI Series</strong> 🚀
   </p>
 </div>
+
+## Post summary
+
+The author starts as a skeptic of "prompt engineer" as a job title, but argues the skill itself matters for ML engineers who put LLMs into production. He treats prompt engineering as part science and part art.
+
+The post gives five basic practices: be clear and specific, provide context, structure the prompt, use examples (few-shot), and refine iteratively. For the last one he suggests logging each prompt attempt in a simple text file with name and version, goal, model settings, full prompt and output.
+
+It then covers seven prompting strategies, each tied to a paper where relevant: zero-shot, few-shot, chain-of-thought (Wei et al., 2022), self-consistency (Wang et al., 2022), tree of thoughts, ReAct and step-back prompting. For tree of thoughts, he tests the "who owns the fish" puzzle with Claude Opus 3.0: the tree-of-thoughts prompt gave the right answer (the German), while plain zero-shot answered Norwegian.
+
+The last section explains sampling controls. Temperature sets randomness, top-K limits choice to the K likeliest tokens, and top-P keeps the smallest set of tokens whose cumulative probability passes P. He gives starting points: temperature 0.1-0.2 with top-K 20-30 and top-P 0.9 for factual answers, 0.0-0.1 with top-K 10 for code, and 0.9 with top-K 50 and top-P 0.99 for brainstorming. His general default is temperature 0.2, top-P 0.95 and top-K 30. The inline prompts from the post are in [code-snippets.md](code-snippets.md).
+
+### Key takeaways
+
+- Specific, contextual, structured prompts beat vague ones.
+- Keep a versioned log of prompts, settings and outputs, like any other experiment.
+- Match the technique to the task: few-shot for format, chain-of-thought for reasoning, tree of thoughts or self-consistency for harder problems.
+- Use low temperature for facts and code, higher for creative work.
+- Different models respond differently, so test on the model you ship.

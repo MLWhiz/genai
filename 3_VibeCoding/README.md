@@ -247,3 +247,21 @@ The future of software development is collaborative, creative, and AI-enhanced. 
     🚀 <strong>Part of the <a href="https://www.mlwhiz.com/">MLWhiz</a> GenAI Series</strong> 🚀
   </p>
 </div>
+
+## Post summary
+
+The post is a first-person account of building a web app almost entirely with AI code generation. The app helps a user decide whether to pay off a mortgage early or invest the money instead. The author compared a 200 GBP monthly investment at 7% against a 200 GBP prepayment on a 450,000 loan at 4.18% over 30 years.
+
+Claude generated the React code over many iterations. The numbers in the final row kept coming out wrong, so he had to check the amortization logic himself. After hitting Claude Pro's limits and persistent state bugs in the published artifact, he finished the fixes in Gemini. The core code took about two hours.
+
+Deployment on Vercel, which he had never used, took more tries. Claude's first commands used create-react-app, which is deprecated. The Vite alternative got mixed up with that earlier context. He restarted in a fresh chat with Next.js, asked for local testing steps Claude had skipped, pushed the code to GitHub, used Claude Projects, and deployed.
+
+His conclusion: it is possible and fast to get a first version, but not a smooth "vibe." AI speeds things up but does not replace you, testing and domain knowledge are non-negotiable, iteration is built in, and deployment needs guidance too. On jobs, he doesn't expect replacement. He expects the skill set to move toward architecture, problem breakdown, validating AI output and debugging. The command-line fragment from the post is in [code-snippets.md](code-snippets.md).
+
+### Key takeaways
+
+- AI-generated code is often wrong at first, especially calculations, so verify it with domain knowledge.
+- Expect to restart chats or switch tools when context gets long or confused.
+- Outdated advice (such as create-react-app) shows up in AI instructions, so read the warnings.
+- Ask for local testing steps explicitly before deploying.
+- Treat the AI like a capable but sometimes wrong junior developer.

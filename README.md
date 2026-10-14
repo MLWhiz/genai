@@ -30,6 +30,16 @@ This content spans the full spectrum of GenAI development:
 | 5 | [Advanced RAG Techniques for ML Engineers: Beyond Vector Search](https://open.substack.com/pub/mlwhiz/p/genai-series-beyond-basic-rag-building) | Guide to building Advanced Retrieval-Augmented Generation applications with Agents |
 | 6 | [Advanced PEFT Techniques for Model Fine-tuning](https://open.substack.com/pub/mlwhiz/p/fine-tuning-llms-your-guide-to-peft?r=9kivc&utm_campaign=post&utm_medium=web&showWelcomeOnShare=true) | Comprehensive guide to Parameter-Efficient Fine-Tuning methods including LoRA, QLoRA, DoRA, AdaLoRA, and IA³ |
 | 7 | [Traditional RAG is Dead, Long Live GraphRAG](https://www.mlwhiz.com/p/traditional-rag-is-dead-long-live) | Evolution beyond traditional RAG systems using knowledge graphs and interconnected intelligence |
+| 8 | [Why LLMs Won't Replace Programmers: A Reality Check](https://www.mlwhiz.com/p/why-llms-wont-replace-programmers) | Why LLMs work better as assistants than replacements for developers: stale knowledge, no real reasoning, system context and accountability |
+| 9 | [GenAI 101 - How Generative AI is Rewriting the Rules for ML Engineers](https://www.mlwhiz.com/p/genai-101-how-generative-ai-is-rewriting) | Discriminative vs generative models, and a playbook for moving between them (hybrid systems, RAG, distillation, LoRA) |
+| 10 | [Did Apple Just Burst the AI Reasoning Bubble? I don't think so](https://www.mlwhiz.com/p/the-hard-truth-about-ai-reasoning) | A look at Apple's "The Illusion of Thinking" paper and what its three complexity regimes mean for practitioners |
+| 11 | [Which AI Subscription is Actually Worth Your Money?](https://www.mlwhiz.com/p/which-ai-subscription-is-actually) | A hands-on comparison of Claude, Cursor, Gemini and ChatGPT subscriptions for developers and non-developers |
+| 12 | [The #1 Reason Your GenAI Project Will Fail in Production (and the 4 Pillars to Prevent It)](https://www.mlwhiz.com/p/from-prototype-to-production-mlops) | GenAIOps: prompts as code, RAG pipelines, continuous evaluation, model routing and cost control |
+| 13 | [What Production Deployments Taught Me About ReAct vs Function Calling](https://www.mlwhiz.com/p/what-production-deployments-taught) | When to use ReAct or function calling, with LlamaIndex code and production lessons on logging, latency and fallbacks |
+| 14 | [I Use Claude Code Every Day. Here's the Setup That Actually Matters](https://www.mlwhiz.com/p/i-use-claude-code-every-day-heres) | An opinionated Claude Code setup: CLAUDE.md, settings.json deny rules, permission modes, sessions, skills, subagents and MCP |
+| 15 | [5 Things Meta Muse Actually Does, and the Engineering Behind Each One](https://www.mlwhiz.com/p/6-things-meta-muse-actually-does) | How Meta's Muse agent works: per-user VMs, the Sentinel authorizer, background tasks and one-time payment cards |
+
+Every folder has its own README with a summary of the post and, where the post has code, a link to the code.
 
 ## Repository Structure
 
@@ -39,9 +49,11 @@ genai/
 │   ├── README.md
 │   └── [12 Research Papers] - Key papers in GenAI evolution
 ├── 2_PromptEngineering/
-│   └── README.md
+│   ├── README.md
+│   └── code-snippets.md
 ├── 3_VibeCoding/
-│   └── README.md
+│   ├── README.md
+│   └── code-snippets.md
 ├── 4_RAG/
 │   ├── README.md
 │   └── RAG Code.ipynb
@@ -54,6 +66,25 @@ genai/
 │   ├── Advanced PEFT Techniques.ipynb
 │   └── requirements.txt
 ├── 7_GraphRAG/
+│   └── README.md
+├── 8_Why_LLMs_Wont_Replace_Programmers/
+│   └── README.md
+├── 9_GenAI_101/
+│   ├── README.md
+│   └── code-snippets.md
+├── 10_AI_Reasoning/
+│   └── README.md
+├── 11_Which_AI_Subscription/
+│   └── README.md
+├── 12_GenAI_In_Production/
+│   └── README.md
+├── 13_ReAct_vs_Function_Calling/
+│   ├── README.md
+│   └── code-snippets.md
+├── 14_Claude_Code_Daily_Setup/
+│   ├── README.md
+│   └── code-snippets.md
+├── 15_Meta_Muse/
 │   └── README.md
 ├── GenAIBooks/
 │   ├── README.md
@@ -130,7 +161,7 @@ A comprehensive collection of 36 most influential research papers in Generative 
 - **Total Research Papers**: 48 (12 in Architectural Journey + 36 in GenAIPapers)
 - **Educational Books**: Comprehensive GenAI learning resources
 - **Practical Notebooks**: 4 hands-on implementation guides
-- **Blog Posts**: 7 comprehensive articles on MLWhiz
+- **Blog Posts**: 15 articles on MLWhiz, each with a folder and README
 - **Categories Covered**: Architecture, Alignment, Fine-tuning, RAG, Multimodal AI, and more
 
 ### 🎯 **Key Resources**

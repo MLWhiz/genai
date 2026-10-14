@@ -334,3 +334,21 @@ pip install llama-index sentence-transformers pandas numpy scikit-learn
     🚀 <strong>Part of the <a href="https://www.mlwhiz.com/">MLWhiz</a> GenAI Series</strong> 🚀
   </p>
 </div>
+
+## Post summary
+
+The post (title: "Building Production-Grade Agentic RAG: Intelligent Recommendation Engines with Agents") builds a book recommendation engine with LlamaIndex. It starts from the point that basic RAG, which embeds documents, runs a vector lookup and passes snippets to an LLM, breaks down on nuanced queries such as "books that explore existential dread but are also surprisingly funny."
+
+The stack is Gemini (gemini-2.0-flash), BGE embeddings (BAAI/bge-large-en-v1.5), ChromaDB and an Amazon Books dataset with ratings and reviews. The pipeline builds Document objects with metadata, splits them into 512-token nodes with 50 overlap, and adds HyDE query transformation. It then runs hybrid retrieval (BM25 plus vector search, fused with reciprocal rerank), re-ranks with bge-reranker-v2-m3, and returns Pydantic-structured output.
+
+The second half adds specialized tools (similarity search, author and rating filter, thematic search, book details, general RAG) and a ReActAgent that picks tools from a system prompt. It is tested on queries like "books similar to The Handmaid's Tale but more hopeful."
+
+The author also lists what didn't come free. HyDE adds an extra LLM call (200-500 ms by his estimate), re-ranking is costly for latency, agent reasoning takes one to four cycles, and a query can cost 3-5 LLM calls. His advice: start simple, add one technique at a time and measure, focus on data quality and metadata, and test with real queries. Code is in [RAG_with_LLAMAIndex.ipynb](RAG_with_LLAMAIndex.ipynb).
+
+### Key takeaways
+
+- HyDE and hybrid retrieval gave the most noticeable gains on abstract queries.
+- BM25 catches exact titles and names that semantic search can miss.
+- Specialized tools plus a ReAct agent handle different intents better than one retriever.
+- Structured output (Pydantic) makes results usable in applications.
+- Each added stage costs latency and money, so add them one at a time and measure.

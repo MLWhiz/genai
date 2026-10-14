@@ -74,3 +74,19 @@ The question isn't whether GraphRAG will become mainstream - it's how quickly yo
 - [Microsoft GraphRAG](https://microsoft.github.io/graphrag/) - Open-source implementation
 - [LlamaIndex GraphRAG](https://docs.llamaindex.ai/en/stable/examples/cookbooks/GraphRAG_v1/) - Practical tutorials
 - [GraphRAG Paper](https://arxiv.org/abs/2404.16130) - Technical foundations
+
+## Post summary
+
+The post (published 2025-07-01, titled "What is GraphRAG and how it works") explains why traditional RAG struggles with relationship-heavy questions and how GraphRAG addresses it. The running example is a book recommender asked for books like "The Hunger Games" with more complex political themes and female protagonists who are scientists. Standard RAG retrieves separate chunks for each part and hopes the LLM connects them. The post names four issues: relationship blindness, context fragmentation, query scope limits and multi-hop reasoning failures.
+
+GraphRAG works in two phases. First, it builds a knowledge graph by extracting entities (books, authors, characters, themes, genres) and relationships from text, detects communities with the Leiden algorithm (the default in Microsoft's GraphRAG), and writes an AI summary for each community. Second, it answers queries in one of two ways. Local queries expand around a specific entity. Global queries use a map-reduce pass over community summaries, for example to combine hard sci-fi, climate themes and an accessible style.
+
+The post lists implementation challenges (entity resolution, relationship quality, graph maintenance) and gives rules for when GraphRAG fits (rich relationships, multi-faceted questions) and when plain RAG is enough (simple lookups, independent content, small collections under about 1000 items). It surveys tools (Microsoft GraphRAG, LlamaIndex, AWS Bedrock Knowledge Bases with Neptune Analytics, Neo4j, NebulaGraph) and upcoming directions such as multimodal, temporal and federated graphs. It is conceptual, and the implementation is promised for the next post in the series.
+
+### Key takeaways
+
+- Standard RAG treats chunks as isolated, which hurts multi-hop and multi-attribute questions.
+- GraphRAG adds explicit entities, relationships and community summaries.
+- Local queries start at an entity. Global queries synthesize across community summaries.
+- Entity resolution and graph maintenance are the main practical costs.
+- Use plain RAG for simple factual lookups over small or independent content.
